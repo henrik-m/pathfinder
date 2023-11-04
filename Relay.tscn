@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1exg11g6cixf"]
+
+[ext_resource type="Script" path="res://Relay.cs" id="1_hpp6i"]
+[ext_resource type="Texture2D" uid="uid://v32qd0nekdtx" path="res://green_node.png" id="1_kyj5j"]
+
+[node name="Relay" type="Node2D"]
+script = ExtResource("1_hpp6i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kyj5j")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PackedVector2Array(-1, -129, -128, -66, -128, 65, 0, 128, 126, 65, 127, -65)

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://r2dpln002yrk"]
+
+[ext_resource type="Script" path="res://PathfinderGame.cs" id="1_cbv47"]
+[ext_resource type="PackedScene" uid="uid://b1exg11g6cixf" path="res://Relay.tscn" id="1_w03e1"]
+[ext_resource type="Script" path="res://GraphManager.cs" id="3_gss81"]
+
+[node name="PathfinderGame" type="Node2D"]
+script = ExtResource("1_cbv47")
+
+[node name="Relay" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
+position = Vector2(214, 165)
+AdjacentNodesPaths = [NodePath("../Relay2"), NodePath("../Relay3")]
+
+[node name="Relay2" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
+position = Vector2(568, 154)
+AdjacentNodesPaths = [NodePath("../Relay4")]
+
+[node name="Relay3" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
+position = Vector2(203, 483)
+AdjacentNodesPaths = [NodePath("../Relay4")]
+
+[node name="Relay4" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
+position = Vector2(595, 475)
+AdjacentNodesPaths = [NodePath("../Relay5")]
+
+[node name="Relay5" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(923, 472)
+IsSelected = true
+AdjacentNodesPaths = [NodePath(".")]
+
+[node name="GraphManager" type="Node2D" parent="."]
+script = ExtResource("3_gss81")
