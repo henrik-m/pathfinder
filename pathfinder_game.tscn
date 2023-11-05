@@ -17,17 +17,28 @@ AdjacentNodesPaths = [NodePath("../Relay4")]
 
 [node name="Relay3" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
 position = Vector2(203, 483)
-AdjacentNodesPaths = [NodePath("../Relay4")]
+AdjacentNodesPaths = [NodePath("../Relay4"), NodePath("../Relay6")]
 
 [node name="Relay4" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
 position = Vector2(595, 475)
-AdjacentNodesPaths = [NodePath("../Relay5")]
+AdjacentNodesPaths = [NodePath("../Relay5"), NodePath("../Relay7")]
 
 [node name="Relay5" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
 modulate = Color(1, 0, 0, 1)
 position = Vector2(923, 472)
 IsSelected = true
-AdjacentNodesPaths = [NodePath(".")]
+AdjacentNodesPaths = [NodePath("../Relay8")]
+
+[node name="Relay6" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
+position = Vector2(203, 809)
+AdjacentNodesPaths = [NodePath("../Relay7")]
+
+[node name="Relay7" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
+position = Vector2(589, 810)
+AdjacentNodesPaths = [NodePath("../Relay8")]
+
+[node name="Relay8" parent="." groups=["RelayNodes"] instance=ExtResource("1_w03e1")]
+position = Vector2(933, 800)
 
 [node name="GraphManager" type="Node2D" parent="."]
 script = ExtResource("3_gss81")
